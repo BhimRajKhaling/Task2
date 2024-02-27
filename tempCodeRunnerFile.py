@@ -1,10 +1,3 @@
-print("hello world")
-print("how are you")
-
-print("I love eating")
-
-
-
 grade = 85
 if grade >= 90:
     print ("Grade A")
