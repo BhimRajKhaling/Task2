@@ -63,24 +63,31 @@ grade=int(input("enter your grade:"))
 print("student information added successfully!")
 
 # Add student information to lists and dictionary
-students_list.append("name")
-students_dict["name"] = {'age': age, 'grade': grade}
+students_list.append("John")
+students_dict["John"] = {'age': age, 'grade': grade}
+print(students_dict.items())
+
 
 print("Student details:")
 for name, info in students_dict.items():
     print(f"Name: {name}, Age: {info['age']}, Grade: {info['grade']}")
     
 #search for student's name
-name = input("Enter student name to search: ")
-if name in students_dict:
-    print(f"student found!:{students_dict[name]}")
+search_name = input("Enter student name that you want to search or simply enter to skip: ")
+if search_name in students_list:
+    info=students_dict[search_name]
+    print(f"name:{search_name}, age:{info['age']}, grade:{info['grade']}")
+else:
+    print("student not found!")    
 
 #Remove the student's name
 remove_name= input("enter the name that you want to remove:") 
 if remove_name in students_list:
-    students_list.remove(remove_name)
     del students_dict[remove_name]
-    print("name removed successfully!")
+    students_list.remove(remove_name)
+    print("student removed successfully!")
+else:
+    print("student not found!")    
     
 
 

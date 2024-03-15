@@ -1,1 +1,4 @@
-Print("My name is Bhim Raj")
+x=5
+y="John"
+print(type(x))
+print(type(y))
